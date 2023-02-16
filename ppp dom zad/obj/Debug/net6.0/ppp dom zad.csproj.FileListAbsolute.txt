@@ -1,0 +1,17 @@
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\obj\Debug\net6.0\ppp dom zad.csproj.AssemblyReference.cache
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\obj\Debug\net6.0\ppp dom zad.GeneratedMSBuildEditorConfig.editorconfig
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\obj\Debug\net6.0\ppp dom zad.AssemblyInfoInputs.cache
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\obj\Debug\net6.0\ppp dom zad.AssemblyInfo.cs
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\obj\Debug\net6.0\ppp dom zad.csproj.CoreCompileInputs.cache
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\bin\Debug\net6.0\ppp dom zad.exe
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\bin\Debug\net6.0\ppp dom zad.deps.json
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\bin\Debug\net6.0\ppp dom zad.runtimeconfig.json
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\bin\Debug\net6.0\ppp dom zad.dll
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\bin\Debug\net6.0\ppp dom zad.pdb
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\obj\Debug\net6.0\ppp dom zad.dll
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\obj\Debug\net6.0\refint\ppp dom zad.dll
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\obj\Debug\net6.0\ppp dom zad.pdb
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\obj\Debug\net6.0\ppp dom zad.genruntimeconfig.cache
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\obj\Debug\net6.0\ref\ppp dom zad.dll
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\3 курс\ППП\ppp dom zad\ppp dom zad\obj\Debug\net6.0\ppp dom zad.csproj.CopyComplete
