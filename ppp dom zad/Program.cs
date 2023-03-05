@@ -8,31 +8,7 @@ Console.SetWindowSize(150, 30);
 Quest_Message qm = new Quest_Message();
 
 //RPGCharacter rpgc = new RPGCharacter("Валера",Race.Человек,Gender.М, 200,200);
-//MageCharacter mc;
-
-RPGCharacter[] rpgc = new RPGCharacter[2]
-            {
-              new RPGCharacter("Валера",Race.Человек,Gender.М,250,150),
-              new RPGCharacter("Даник",Race.Гном,Gender.М,500,400)
-
-            };
-
-MageCharacter mc = new MageCharacter("Даник", Race.Гном, Gender.М, 200, 200, 200, 200);
-mc.CastSpell(10);
-
-Console.WriteLine();
-
-Console.WriteLine("До лечения = " + rpgc[0]);
-mc.HealSpell(rpgc[0], 25);
-Console.WriteLine("После лечения - " + rpgc[0]);
-
-Health h = new Health(5, true, false);
-h.MagicVozdeistvie(rpgc[0], 26);
-Console.WriteLine("Прибавили магией hp: " + rpgc[0]);
-
-Protivoyadie p = new Protivoyadie(true,true);
-
-
+//MageCharЫacter mc;
 
 Map map = new Map();
 int q1 = 0;
@@ -60,38 +36,70 @@ while (running)
                 case 1:
                     map.Bowerstone_map_go_ExitTown();
                     qm.Quest_1(q1);
-                    map.Quest_1_Map_World_goRosha();
+                    map.Quest_1_Map_World_goRosha(q1);
                     qm.Quest_1(q1 = 1);
+                    qm.Quest_1(q1 = 2);
+                    map.Quest_1_Map_World_goRosha(q1 = 1);
+                    qm.Quest_1(q1 = 3);
+                    qm.Quest_1(q1 = 4);
+                    qm.Quest_1(q1 = 5);
+                    map.Quest_1_Map_World_goRosha(q1 = 2);
                     break;
                 case 2:
-
                     map.Bowerstone_map_go_Shop();
                     qm.Shop();
                     Thread.Sleep(500);
+                    qm.Quest_1(q1);
+                    map.Quest_1_Map_World_goRosha(q1);
                     qm.Quest_1(q1 = 1);
-                    map.Quest_1_Map_World_goRosha();
+                    qm.Quest_1(q1 = 2);
+                    map.Quest_1_Map_World_goRosha(q1 = 1);
+                    qm.Quest_1(q1 = 3);
+                    qm.Quest_1(q1 = 4);
+                    qm.Quest_1(q1 = 5);
+                    map.Quest_1_Map_World_goRosha(q1 = 2);
                     break;
                 case 3:
                     map.Bowerstone_map_go_Schooll();
                     qm.School_quest1();
                     qm.School_exit();
+                    qm.Quest_1(q1);
+                    map.Quest_1_Map_World_goRosha(q1);
                     qm.Quest_1(q1 = 1);
-                    map.Quest_1_Map_World_goRosha();
+                    qm.Quest_1(q1 = 2);
+                    map.Quest_1_Map_World_goRosha(q1 = 1);
+                    qm.Quest_1(q1 = 3);
+                    qm.Quest_1(q1 = 4);
+                    qm.Quest_1(q1 = 5);
+                    map.Quest_1_Map_World_goRosha(q1 = 2);
                     break;
                 case 4:
                     map.Bowerstone_map_go_ZCB();
                     qm.ZCHB();
+                    qm.Quest_1(q1);
+                    map.Quest_1_Map_World_goRosha(q1);
                     qm.Quest_1(q1 = 1);
-                    map.Quest_1_Map_World_goRosha();
+                    qm.Quest_1(q1 = 2);
+                    map.Quest_1_Map_World_goRosha(q1 = 1);
+                    qm.Quest_1(q1 = 3);
+                    qm.Quest_1(q1 = 4);
+                    qm.Quest_1(q1 = 5);
+                    map.Quest_1_Map_World_goRosha(q1 = 2);
                     break;
                 case 5:
                     map.Bowerstone_map_go_SouthBowerstone();
                     qm.SouthTown();
+                    qm.Quest_1(q1);
+                    map.Quest_1_Map_World_goRosha(q1);
                     qm.Quest_1(q1 = 1);
-                    map.Quest_1_Map_World_goRosha();
+                    qm.Quest_1(q1 = 2);
+                    map.Quest_1_Map_World_goRosha(q1 = 1);
+                    qm.Quest_1(q1 = 3);
+                    qm.Quest_1(q1 = 4);
+                    qm.Quest_1(q1 = 5);
+                    map.Quest_1_Map_World_goRosha(q1 = 2);
                     break;
             }
-            // здесь можно добавить код для начала игры
             break;
         case "2":
             goto link1;

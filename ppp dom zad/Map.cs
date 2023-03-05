@@ -3064,7 +3064,7 @@ namespace ppp_dom_zad
 
             }
         }
-        public void Quest_1_Map_World_goRosha()
+        public void Quest_1_Map_World_goRosha(int q1)
         {
             Console.Clear();
             string l_1 = "\n\n\t\t __________________________________________\n" +
@@ -3075,6 +3075,45 @@ namespace ppp_dom_zad
                         "\t\t|       |                                  |\n" +
                         "\t\t||река|_|_                                 |\n" +
                         "\t\t|         \\     |болото|_____|темная роща| |\n" +
+                        "\t\t|          \\              /                |\n" +
+                        "\t\t|           \\____________/                 |\n" +
+                        "\t\t|                  |                       |\n" +
+                        "\t\t|             {Бауэрстоун}                 |\n" +
+                        "\t\t|__________________________________________|\n";
+            string l_1_2 = "\n\n\t\t __________________________________________\n" +
+                        "\t\t||выход из леса|                           |\n" +
+                        "\t\t|   |                                      |\n" +
+                        "\t\t|   |       __________|темная роща|        |\n" +
+                        "\t\t|    \\__ __/                               |\n" +
+                        "\t\t|       |                                  |\n" +
+                        "\t\t||река|_|_                                 |\n" +
+                        "\t\t|         \\     |болото|____*|темная роща| |\n" +
+                        "\t\t|          \\              /                |\n" +
+                        "\t\t|           \\____________/                 |\n" +
+                        "\t\t|                  |                       |\n" +
+                        "\t\t|             {Бауэрстоун}                 |\n" +
+                        "\t\t|__________________________________________|\n";
+            string l_1_3 = "\n\n\t\t __________________________________________\n" +
+                        "\t\t||выход из леса|                           |\n" +
+                        "\t\t|   |                                      |\n" +
+                        "\t\t|   |       __________|темная роща|        |\n" +
+                        "\t\t|    \\__ __/                               |\n" +
+                        "\t\t|       |                                  |\n" +
+                        "\t\t||река|_|_                                 |\n" +
+                        "\t\t|         \\     |болото|___*_|темная роща| |\n" +
+                        "\t\t|          \\              /                |\n" +
+                        "\t\t|           \\____________/                 |\n" +
+                        "\t\t|                  |                       |\n" +
+                        "\t\t|             {Бауэрстоун}                 |\n" +
+                        "\t\t|__________________________________________|\n";
+            string l_1_4 = "\n\n\t\t __________________________________________\n" +
+                        "\t\t||выход из леса|                           |\n" +
+                        "\t\t|   |                                      |\n" +
+                        "\t\t|   |       __________|темная роща|        |\n" +
+                        "\t\t|    \\__ __/                               |\n" +
+                        "\t\t|       |                                  |\n" +
+                        "\t\t||река|_|_                                 |\n" +
+                        "\t\t|         \\     |болото|__*__|темная роща| |\n" +
                         "\t\t|          \\              /                |\n" +
                         "\t\t|           \\____________/                 |\n" +
                         "\t\t|                  |                       |\n" +
@@ -3210,42 +3249,100 @@ namespace ppp_dom_zad
                       "\t\t|                  |                       |\n" +
                       "\t\t|             {Бауэрстоун}                 |\n" +
                       "\t\t|__________________________________________|\n";
-            for (int i = 0; i < 1; i++)
+            if (q1 == 0)
             {
-                Console.Write(l_11);
-                Thread.Sleep(500);
-                Console.Clear();
-                Console.Write(l_10);
-                Thread.Sleep(500);
-                Console.Clear();
-                Console.Write(l_9);
-                Thread.Sleep(500);
-                Console.Clear();
-                Console.Write(l_8);
-                Thread.Sleep(500);
-                Console.Clear();
-                Console.Write(l_7);
-                Thread.Sleep(500);
-                Console.Clear();
-                Console.Write(l_6);
-                Thread.Sleep(500);
-                Console.Clear();
-                Console.Write(l_5);
-                Thread.Sleep(500);
-                Console.Clear();
-                Console.Write(l_4);
-                Thread.Sleep(500);
-                Console.Clear();
-                Console.Write(l_3);
+                for (int i = 0; i < 1; i++)
+                {
+                    Console.Write(l_11);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_10);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_9);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_8);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_7);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_6);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_5);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_4);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_3);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_2);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_1);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                }
+            }
+            if (q1 == 1)
+            {
+                for (int i = 0; i < 1; i++)
+                {
+                    Console.Write(l_1);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_1_2);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_1_3);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                    Console.Write(l_1_4);
+                    Thread.Sleep(500);
+                    Console.Clear();
+                }
+            }
+            if (q1 == 2)
+            {
+                Console.Write(l_1_4);
                 Thread.Sleep(500);
                 Console.Clear();
                 Console.Write(l_2);
                 Thread.Sleep(500);
                 Console.Clear();
-                Console.Write(l_1);
+                Console.Write(l_3);
+                Thread.Sleep(500);
+                Console.Clear();
+                Console.Write(l_4);
+                Thread.Sleep(500);
+                Console.Clear();
+                Console.Write(l_5);
+                Thread.Sleep(500);
+                Console.Clear();
+                Console.Write(l_6);
+                Thread.Sleep(500);
+                Console.Clear();
+                Console.Write(l_7);
+                Thread.Sleep(500);
+                Console.Clear();
+                Console.Write(l_8);
+                Thread.Sleep(500);
+                Console.Clear();
+                Console.Write(l_9);
+                Thread.Sleep(500);
+                Console.Clear();
+                Console.Write(l_10);
+                Thread.Sleep(500);
+                Console.Clear();
+                Console.Write(l_11);
                 Thread.Sleep(500);
                 Console.Clear();
             }
+
         }
     }
 }
