@@ -7,12 +7,35 @@ Console.SetWindowSize(150, 30);
 
 Quest_Message qm = new Quest_Message();
 
-RPGCharacter rpgc = new RPGCharacter("Валера",Race.Человек,Gender.М, 200,200);
+//RPGCharacter rpgc = new RPGCharacter("Валера",Race.Человек,Gender.М, 200,200);
 //MageCharacter mc;
+
+RPGCharacter[] rpgc = new RPGCharacter[2]
+            {
+              new RPGCharacter("Валера",Race.Человек,Gender.М,250,150),
+              new RPGCharacter("Даник",Race.Гном,Gender.М,500,400)
+
+            };
+
+MageCharacter mc = new MageCharacter("Даник", Race.Гном, Gender.М, 200, 200, 200, 200);
+mc.CastSpell(10);
+
+Console.WriteLine();
+
+Console.WriteLine("До лечения = " + rpgc[0]);
+mc.HealSpell(rpgc[0], 25);
+Console.WriteLine("После лечения - " + rpgc[0]);
+
+Health h = new Health(5, true, false);
+h.MagicVozdeistvie(rpgc[0], 26);
+Console.WriteLine("Прибавили магией hp: " + rpgc[0]);
+
+Protivoyadie p = new Protivoyadie(true,true);
 
 
 
 Map map = new Map();
+int q1 = 0;
 bool running = true;
 while (running)
 {
@@ -26,75 +49,52 @@ while (running)
     switch (input)
     {
         case "1":
-            // Запрос имени персонажа
-            Console.Write("Введите имя персонажа: ");
-            string name = Console.ReadLine();
-
-            // Запрос расы персонажа
-            Console.Write("Введите расу персонажа (Человек, Дворф, Эльф, Гном): ");
-            Race race = (Race)Enum.Parse(typeof(Race), Console.ReadLine());
-
-            // Запрос пола персонажа
-            Console.Write("Введите пол персонажа (М, Ж): ");
-            Gender gender = (Gender)Enum.Parse(typeof(Gender), Console.ReadLine());
-
-            // Запрос максимального здоровья персонажа
-            Console.Write("Введите максимальное здоровье персонажа: ");
-            int maxHealth = Convert.ToInt32(Console.ReadLine());
-
-            // Запрос текущего здоровья персонажа
-            Console.Write("Введите текущее здоровье персонажа: ");
-            int currentHealth = Convert.ToInt32(Console.ReadLine());
-
-            RPGCharacter player = new RPGCharacter(name, race, gender, maxHealth, currentHealth);
-            Console.WriteLine("Вы создали персонажа и игра начата!");
-            Thread.Sleep(2000);
             qm.BeginOfTheGame();
+        link1:
             map.Bowerstone_map();
-            Console.Write("\nКуда вы пойдете??\n>>> ");
-            string Plot_Baworstone = Convert.ToString(Console.ReadLine());
-            if (Plot_Baworstone == "Выход из города")
+            Console.Write("\nКуда вы пойдете??\n1 - Выход из города\n2 - Рынок\n3 - Школа\n4 - Западная Часть Города\n5 - Южная Часть Города\n>>> ");
+            int Plot_Baworstone = Convert.ToInt32(Console.ReadLine());
+
+            switch (Plot_Baworstone)
             {
-                map.Bowerstone_map_go_ExitTown();
-                qm.Quest_1();
-                map.Quest_1_Map_World_goRosha();
+                case 1:
+                    map.Bowerstone_map_go_ExitTown();
+                    qm.Quest_1(q1);
+                    map.Quest_1_Map_World_goRosha();
+                    qm.Quest_1(q1 = 1);
+                    break;
+                case 2:
+
+                    map.Bowerstone_map_go_Shop();
+                    qm.Shop();
+                    Thread.Sleep(500);
+                    qm.Quest_1(q1 = 1);
+                    map.Quest_1_Map_World_goRosha();
+                    break;
+                case 3:
+                    map.Bowerstone_map_go_Schooll();
+                    qm.School_quest1();
+                    qm.School_exit();
+                    qm.Quest_1(q1 = 1);
+                    map.Quest_1_Map_World_goRosha();
+                    break;
+                case 4:
+                    map.Bowerstone_map_go_ZCB();
+                    qm.ZCHB();
+                    qm.Quest_1(q1 = 1);
+                    map.Quest_1_Map_World_goRosha();
+                    break;
+                case 5:
+                    map.Bowerstone_map_go_SouthBowerstone();
+                    qm.SouthTown();
+                    qm.Quest_1(q1 = 1);
+                    map.Quest_1_Map_World_goRosha();
+                    break;
             }
             // здесь можно добавить код для начала игры
             break;
         case "2":
-            // Запрос имени персонажа
-            Console.Write("Введите имя персонажа: ");
-            name = Console.ReadLine();
-
-            // Запрос расы персонажа
-            Console.Write("Введите расу персонажа (Человек, Дворф, Эльф, Гном): ");
-            race = (Race)Enum.Parse(typeof(Race), Console.ReadLine());
-
-            // Запрос пола персонажа
-            Console.Write("Введите пол персонажа (М, Ж): ");
-            gender = (Gender)Enum.Parse(typeof(Gender), Console.ReadLine());
-
-            // Запрос максимального здоровья персонажа
-            Console.Write("Введите максимальное здоровье персонажа: ");
-            maxHealth = Convert.ToInt32(Console.ReadLine());
-
-            // Запрос текущего здоровья персонажа
-            Console.Write("Введите текущее здоровье персонажа: ");
-            currentHealth = Convert.ToInt32(Console.ReadLine());
-
-            player = new RPGCharacter(name, race, gender, maxHealth, currentHealth);
-            Console.WriteLine("Вы создали персонажа и игра начата!");
-            map.Bowerstone_map();
-            Console.Write("\nКуда вы пойдете??\n>>> ");
-            Plot_Baworstone = Convert.ToString(Console.ReadLine());
-            if (Plot_Baworstone == "Выход из города")
-            {
-                map.Bowerstone_map_go_ExitTown();
-                qm.Quest_1();
-                map.Quest_1_Map_World_goRosha();
-            }
-            Console.WriteLine("Начало пропущено!");
-            // здесь можно добавить код для пропуска начала игры
+            goto link1;
             break;
         case "3":
             Console.WriteLine("Выход из игры...");
