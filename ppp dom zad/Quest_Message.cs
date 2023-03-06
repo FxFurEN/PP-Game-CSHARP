@@ -258,6 +258,19 @@ namespace ppp_dom_zad
                 "\r\n\r\nВы тщательно обернули кристалл и положили его в свой рюкзак, затем направились к выходу из храма. Все было тихо и спокойно, никаких ловушек или опасностей, только загадки, которые вам удалось успешно разгадать." +
                 "\nВы покинули храм и отправились в город.";
 
+            string q_9 = "Войдя в город вы направились в таверну где вы взяли задание у странника, но его не оказалась там." +
+                "\nВы решили его подождать, заказав вкусный ужин и попивая пиво. Вскоре через пару часов вы его замечаете и махаете ему рукой чтобы он вас заметил." +
+                "\nСев к вам за столик он замечает возле вас огромный сверток и задает вам вопрос " +
+                "\r\n\"Это то что я думаю? - ответил невнятно странник." +
+                "\r\n\"Да, это голова монстра, которого вы сказали мне убить\" - ответили вы" +
+                "\nСтранник, посмотрев на голову монстра, улыбнулся и сказал: \"Вы действительно умеете свою работу. Я думаю, что у нас будет еще много дел в будущем.\" Вы улыбнулись в ответ и забрали свою награду, которую странник вам предложил.";
+
+            string q_10 = "Вы вышли с таверны и отправились по улицам города, но что-то было не так. Вы чувствовали, что вас преследуют, но не могли понять, кто это мог быть." +
+                "\nВнезапно, кто-то из темноты выскочил на вас и атаковал. Вы попытались защититься, но были слишком слабы, чтобы противостоять нападающему." +
+                "\nВаше последнее воспоминание - это темнота и голос, который говорил: \"Ты никогда не найдешь этот кристалл\"." +
+                "\r\n\r\nКогда вы очнулись, вы были в незнакомом месте. Вокруг вас были странные растения, и воздух казался тяжелым и душным." +
+                "\nВы попытались встать на ноги, но ваши конечности были слабыми и дрожали. Вы почувствовали, что вы потеряли магический кристалл.";
+
 
             if (q1 == 0)
             {
@@ -353,16 +366,16 @@ namespace ppp_dom_zad
                 }
                 else
                 {
+                    Console.Clear();
                     for (int i = 0; i < q_6_1_1.Length; i++)
                     {
                         if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Spacebar)
                         {
-                            Console.Clear();
                             Console.Write(q_6_1_1);
                             Thread.Sleep(2000);
                             break;
                         }
-                        Console.Clear();
+                        
                         Console.Write(q_6_1_1[i]);
                         Thread.Sleep(50); // задержка в 50 миллисекунд между символами
                     }
@@ -381,16 +394,16 @@ namespace ppp_dom_zad
                 }
                 else
                 {
+                    Console.Clear();
                     for (int i = 0; i < q_6_1_1.Length; i++)
                     {
                         if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Spacebar)
                         {
-                            Console.Clear();
                             Console.Write(q_6_1_1);
                             Thread.Sleep(2000);
                             break;
                         }
-                        Console.Clear();
+                        
                         Console.Write(q_6_1_1[i]);
                         Thread.Sleep(50); // задержка в 50 миллисекунд между символами
                     }
@@ -411,16 +424,16 @@ namespace ppp_dom_zad
                 }
                 else
                 {
+                    Console.Clear();
                     for (int i = 0; i < q_6_1_1.Length; i++)
                     {
                         if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Spacebar)
                         {
-                            Console.Clear();
                             Console.Write(q_6_1_1);
                             Thread.Sleep(2000);
                             break;
                         }
-                        Console.Clear();
+                        
                         Console.Write(q_6_1_1[i]);
                         Thread.Sleep(50); // задержка в 50 миллисекунд между символами
                     }
@@ -431,7 +444,33 @@ namespace ppp_dom_zad
             }
             if (q1 == 6)
             {
-
+                Console.Clear();
+                for (int i = 0; i < q_9.Length; i++)
+                {
+                    if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Spacebar)
+                    {
+                        Console.Write(q_9);
+                        Thread.Sleep(2000);
+                        break;
+                    }
+                    
+                    Console.Write(q_9[i]);
+                    Thread.Sleep(50); // задержка в 50 миллисекунд между символами
+                }
+                Thread.Sleep(2000);
+                Console.Clear();
+                for (int i = 0; i < q_10.Length; i++)
+                {
+                    if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Spacebar)
+                    {
+                        Console.Write(q_10);
+                        Thread.Sleep(2000);
+                        break;
+                    }
+                    
+                    Console.Write(q_10[i]);
+                    Thread.Sleep(50); // задержка в 50 миллисекунд между символами
+                }
             }
         }
 
